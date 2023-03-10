@@ -1,5 +1,6 @@
 import Service.Bicycle;
 import Service.Car;
+import Service.ServiceStation;
 import Service.Truck;
 
 public class Main {
@@ -13,11 +14,11 @@ public class Main {
         Bicycle bicycle1 = new Bicycle("bicycle1", 2);
         Bicycle bicycle2 = new Bicycle("bicycle2", 2);
 
-        car1.check();
-        car2.check();
-        truck1.check();
-        truck2.check();
-        bicycle1.check();
-        bicycle2.check();
+        ServiceStation.check(car1);
+        ServiceStation.check(car2);
+        ServiceStation.check(truck1);
+        ServiceStation.check(truck2);
+        ServiceStation.check(bicycle1);
+        ServiceStation.check(bicycle2);
     }
 }

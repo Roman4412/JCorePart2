@@ -1,14 +1,20 @@
 package Service;
 
-public class Truck extends Vehicle {
+public class Truck extends MotorServiceable {
     public Truck(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
+    void checkTrailer() {
+        System.out.println("Проверяем прицеп");
+    }
+
     @Override
-    public void check() {
+    public void service() {
         System.out.println("Обслуживаем " + getModelName());
-        updateTyre(getWheelsCount());
+        updateTyre();
         checkEngine();
         checkTrailer();
     }
+
+
 }

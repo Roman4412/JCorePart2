@@ -1,13 +1,12 @@
 package Service;
 
-public class Bicycle extends Vehicle  {
+public class Bicycle extends WheeledServiceable {
     public Bicycle(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
-
     @Override
-    public void check() {
+    public void service() {
         System.out.println("Обслуживаем " + getModelName());
-        updateTyre(getWheelsCount());
+        updateTyre();
     }
 }
